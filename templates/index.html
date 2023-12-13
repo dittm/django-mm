@@ -1,8 +1,17 @@
 <!-- home.html -->
+
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% load static %}
+
 {% block content %}
+
 <div class="container">
+  <div>
+    {% include 'carousel-m.html' %}
+  </div>
     <div id="content" class="row">
     <div class="page-header">
       <h1>Monroe Unveiled: A Digital Edition</h1>
@@ -34,7 +43,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="images/monroe.jpg" class="card-img-top" alt="..."/>
+          <img src="{% static 'images/monroe.jpg' %}" class="card-img-top" alt="..."/>
           <div class="card-body">
             <h5 class="card-title">About Marilyn Monroe</h5>
             <p class="card-text" style="text-align:justify;">Marilyn Monroe, an enduring cultural icon, captivated audiences with her unparalleled beauty, charisma, and talent. Beyond the silver screen, she was a multifaceted individual, encompassing complexity, vulnerability, and an indomitable spirit. Explore the captivating life and legacy of Monroe.</p>
@@ -45,7 +54,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="images/monroe_film.jpg" class="card-img-top" alt="..."/>
+          <img src="{% static 'images/monroe_film.jpg' %}" class="card-img-top" alt="..."/>
           <div class="card-body">
             <h5 class="card-title">Filmography</h5>
             <p class="card-text" style="text-align:justify;">Marilyn Monroe graced the silver screen with an illustrious career that defined an era in Hollywood. Her filmography boasts an array of iconic performances, showcasing her versatility, charm, and undeniable star power. Each film she starred in added layers to her enduring legacy.</p>

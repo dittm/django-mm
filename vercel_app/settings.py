@@ -114,7 +114,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+import os
+
+# Define BASE_DIR using os.path.join
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Define the static directory using os.path.join
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+STATIC_URL = '/static/'  # This should start with a leading slash
+
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+
+# Define STATIC_ROOT as an absolute path to the directory where static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
