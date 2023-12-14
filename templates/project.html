@@ -1,18 +1,32 @@
 <!-- home.html -->
+
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% load static %}
+
 {% block content %}
-<div class="page-header">
-    <h1>About the project</h1>
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+      </div>
+    <div id="content" class="row">
+    <div class="page-header">
+      <h1>About</h1>
+    </div>
+
+    <div style="text-align:justify;">
+      <p >Welcome to "Marilyn Unveiled: A Digital Edition," an immersive exploration into the life, writings, and cinematic legacy of the iconic Marilyn Monroe. This digital edition offers an intimate glimpse into Marilyn's world through a curated collection of her personal letters, evocative poems, and delightful drawings, providing a deeper understanding of her private thoughts and passions.</p>
+
+      <p>Delve into Marilyn's personal correspondence, where her candid letters reveal her innermost feelings, aspirations, and the complexities of her life beyond the spotlight. Explore her poetic expressions that reflect her emotions, dreams, and the essence of her soul. Additionally, uncover Marilyn's artistic expressions with a compilation of her drawings.</p>
+
+      <p>Beyond her personal writings, this edition provides a comprehensive view of Marilyn Monroe's impact on popular culture, highlighting key milestones, and pivotal moments that shaped her legacy. Explore her extensive filmography, showcasing her diverse roles and contributions to the silver screen, cementing her status as an enduring cultural icon. Moreover, this edition includes a meticulously crafted TEI (Text Encoding Initiative) representation of Marilyn's works, offering a scholarly approach to analyzing her writings. The TEI encoding provides a structured framework, enabling in-depth exploration and analysis of the contextual information embedded within her letters, poems, and drawings.</p>
+      
+      <p>Embark on a journey through Marilyn Monroe's life, words, and cinematic achievements. We invite you to immerse yourself in "Marilyn Unveiled: A Digital Edition" to discover the depth and richness of this iconic figure's legacy.</p>
+    </div>
+
   </div>
-
-  <div style="text-align:justify;">
-    <p>Welcome to "Marilyn Unveiled: A Digital Edition," an immersive exploration into the life, writings, and cinematic legacy of the iconic Marilyn Monroe. This digital edition offers an intimate glimpse into Marilyn's world through a curated collection of her personal letters, evocative poems, and delightful drawings, providing a deeper understanding of her private thoughts and passions.</p>
-
-    <p>Delve into Marilyn's personal correspondence, where her candid letters reveal her innermost feelings, aspirations, and the complexities of her life beyond the spotlight. Explore her poetic expressions that reflect her emotions, dreams, and the essence of her soul. Additionally, uncover Marilyn's artistic expression through her drawings.</p>
-
-    <p>Beyond her personal writings, this edition provides a comprehensive view of Marilyn Monroe's impact on popular culture, highlighting key milestones, and pivotal moments that shaped her legacy. Explore her extensive filmography, showcasing her diverse roles and contributions to the silver screen, cementing her status as an enduring cultural icon. Moreover, this edition includes a meticulously crafted TEI (Text Encoding Initiative) representation of Marilyn's works, offering a scholarly approach to analyzing her writings. The TEI encoding provides a structured framework, enabling in-depth exploration and analysis of the contextual information embedded within her letters, poems, and drawings.</p>
-    
-    <p>Embark on a journey through Marilyn Monroe's life, words, and cinematic achievements. We invite you to immerse yourself in "Marilyn Unveiled: A Digital Edition" to discover the depth and richness of this iconic figure's legacy.</p>
-  </div>
+</div>
 {% endblock %}

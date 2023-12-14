@@ -1,0 +1,198 @@
+<!-- example/templates/example/entity_detail.html -->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+      </div>
+    <div id="content" class="row">
+        <div class="page-header">
+            <h1>{{ entity.name }}</h1>
+        </div>
+    <p>Category: {{ entity.category }}</p>
+
+
+
+
+<div class="container" style="margin: 16px;">
+    <div class="row">
+      <div class="col">
+        <div id="letter" style="width: 800px; height: 600px;"></div>
+        <div style="padding: 16px;" class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-dark" onclick="openImages()"><i class="fa-solid fa-download" style="color: #212529;"></i> <a target="_blank" class="download-images">Image</a></button>
+          <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{{ entity.xml.url }}" target="_blank" class="download-xml">TEI/XML</a></button>
+          <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{{ entity.metadata.url }}" target="_blank" class="download-dc">DC Metadata</a></button>
+        </div>
+      </div>
+      <div class="col" style="background-color: #efefef;">
+        <button id="toggleButton" class="btn btn-outline-dark" style="margin: 10px;">Show Transcription</button>
+        <div id="letterContent" style="display: none;"></div> <!-- Initially hidden -->
+        <table id="xmlTable" style="display: block;"></table>  <!-- Initially shown -->
+      </div>
+    </div>
+  </div>
+
+    </div>
+</div>
+
+  <script src="{% static 'osd/openseadragon.min.js' %}"></script>
+
+
+  <script>
+    function openImages() {
+window.open('https://placehold.co/800x600?text=TBD', '_blank');
+
+setTimeout(function() {
+  window.open('https://placehold.co/800x600?text=TBD', '_blank');
+}, 300);
+}
+  </script>
+
+  <!-- button to toggle between transcription and metadata -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButton');
+        const transcriptionContent = document.getElementById('letterContent');
+        const tableContent = document.getElementById('xmlTable');
+
+        function toggleDisplay() {
+            if (transcriptionContent && tableContent) {
+                if (transcriptionContent.style.display !== 'none') {
+                    transcriptionContent.style.display = 'none';
+                    tableContent.style.display = 'block';
+                    toggleButton.textContent = 'Show Transcription';
+                } else {
+                    transcriptionContent.style.display = 'block';
+                    tableContent.style.display = 'none';
+                    toggleButton.textContent = 'Show Metadata';
+                }
+            }
+        }
+
+        if (toggleButton) {
+            toggleButton.addEventListener('click', toggleDisplay);
+        }
+    });
+</script>
+
+
+
+    <!-- loading openseadragon images -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            OpenSeadragon({
+                id: 'letter',
+                prefixUrl: "{% static 'osd/images/' %}",
+                showNavigator: true,
+                sequenceMode: true,
+                showReferenceStrip: true,
+                showRotationControl: true,
+                referenceStripScroll: "horizontal",
+                showFullPageControl: false,
+                tileSources: [{
+                    type: 'image',
+                    url: 'https://placehold.co/600x800?text=TBD'
+                }, {
+                    type: 'image',
+                    url: 'https://placehold.co/600x800?text=TBD'
+                }]
+            });
+        });
+    </script>
+
+<script>
+    function loadXMLDoc(filename, callback) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                callback(this.responseXML);
+            } else if (this.readyState == 4 && this.status != 200) {
+                console.error('Failed to load:', filename, 'Status:', this.status);
+            }
+        };
+        xhttp.open("GET", filename, true);
+        xhttp.send();
+    }
+
+    function displayLetter() {
+        loadXMLDoc("{{ entity.xml.url }}", function(letterXml) {
+            loadXMLDoc("{% static 'xslt/letter.xsl' %}", function(xsl) {
+                var xsltProcessor = new XSLTProcessor();
+                xsltProcessor.importStylesheet(xsl);
+
+                var resultDocument = xsltProcessor.transformToFragment(letterXml, document);
+                document.getElementById("letterContent").appendChild(resultDocument);
+            });
+        });
+
+        loadXMLDoc("{{ entity.metadata.url }}", function(metadataXml) {
+            var title = metadataXml.evaluate("string(/*[local-name()='metadata']/*[local-name()='dc']/*[local-name()='title'])", metadataXml, null, XPathResult.STRING_TYPE, null).stringValue;
+
+            const metadata = metadataXml.getElementsByTagName('metadata')[0];
+            const dcElements = metadata.getElementsByTagName('*');
+
+            const table = document.getElementById('xmlTable');
+            const tbody = table.createTBody();
+
+            const elementLabels = {
+                'dc:title': 'Title',
+                'dc:creator': 'Creator',
+                'dc:contributor': 'Contributor',
+                'dc:publisher': 'Publisher',
+                'dc:date': 'Date',
+                'dc:rights': 'Rights',
+                'dc:coverage': 'Place of Publication',
+                'dc:relation': 'Relation',
+                'dc:extent': 'Extent',
+                'dc:height': 'Height (in)',
+                'dc:width': 'Width (in)',
+                'dc:value': 'ISBN'
+
+                };
+
+            const displayOrder = [
+                'dc:title',
+                'dc:creator',
+                'dc:contributor',
+                'dc:publisher',
+                'dc:value',
+                'dc:date',
+                'dc:rights',
+                'dc:coverage',
+                'dc:type',
+                'dc:extent',
+                'dc:height',
+                'dc:width',
+                'dc:format'
+                ];
+
+            for (let i = 0; i < dcElements.length; i++) {
+                const element = dcElements[i];
+                const tagName = element.tagName.toLowerCase();
+                const content = element.textContent.trim();
+
+                if (elementLabels[tagName]) {
+                    const row = tbody.insertRow();
+                    const cell = row.insertCell();
+                    const formattedContent = `<strong>${elementLabels[tagName]}</strong> ${content}`;
+                    cell.innerHTML = formattedContent;
+                }
+            }
+
+            table.style.display = 'block';
+            document.getElementById('transcriptionContent').style.display = 'none';
+            document.getElementById('toggleButton').textContent = 'Show Transcription';
+        });
+    }
+
+    window.onload = displayLetter;
+</script>
+
+
+{% endblock %}

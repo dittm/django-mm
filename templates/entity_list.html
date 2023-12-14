@@ -1,0 +1,20 @@
+<!-- example/templates/example/entity_list.html -->
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+      </div>
+    <div id="content" class="row">
+        <div class="page-header">
+            <h1>Poems, Letters and Drawings</h1>
+        </div>
+    <ul>
+        {% for entity in entities %}
+            <li><a href="{% url 'entity_detail' entity.pk %}">{{ entity.name }}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endblock %}

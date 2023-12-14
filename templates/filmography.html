@@ -1,0 +1,94 @@
+<!-- home.html -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+      </div>
+    <div id="content" class="row">
+    <div class="page-header">
+        <h1>Filmography</h1>
+    </div>
+
+    <div class="container" style="margin: 16px;">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  See Monroe's 1940s Films (4)
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" >
+                <div class="accordion-body">
+                    <div class="row">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Dangerous Years (1947)</li>
+                        <li class="list-group-item">Scudda Hoo! Scudda Hay! (1948)</li>
+                        <li class="list-group-item">Ladies of the Chorus (1948)</li>
+                        <li class="list-group-item">Love Happy (1949)</li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  See Monroe's 1950s Films
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" >
+                <div class="accordion-body">
+                    <div class="row">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">A Ticket to Tomahawk (1950)</li>
+                        <li class="list-group-item">The Asphalt Jungle (1950)</li>
+                        <li class="list-group-item">All About Eve (1950)</li>
+                        <li class="list-group-item">The Fireball (1950)</li>
+                        <li class="list-group-item">Right Cross (1951)</li>
+                        <li class="list-group-item">Home Town Story (1951)</li>
+                        <li class="list-group-item">As Young as You Feel (1951)</li>
+                        <li class="list-group-item">Love Nest (1951)</li>
+                        <li class="list-group-item">Let's Make It Legal (1951)</li>
+                        <li class="list-group-item">Clash by Night (1952)</li>
+                        <li class="list-group-item">We're Not Married! (1952)</li>
+                        <li class="list-group-item">Don't Bother to Knock (1952)</li>
+                        <li class="list-group-item">Monkey Business (1952)</li>
+                        <li class="list-group-item">Niagara (1953)</li>
+                        <li class="list-group-item">Gentlemen Prefer Blondes (1953)</li>
+                        <li class="list-group-item">How to Marry a Millionaire (1953)</li>
+                        <li class="list-group-item">River of No Return (1954)</li>
+                        <li class="list-group-item">The Seven Year Itch (1955)</li>
+                        <li class="list-group-item">There's No Business Like Show Business (1954)</li>
+                        <li class="list-group-item">Bus Stop (1956)</li>
+                        <li class="list-group-item">The Prince and the Showgirl (1957)</li>
+                        <li class="list-group-item">Some Like It Hot (1959)</li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  See Monroe's 1960s Films
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" >
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+  </div>
+</div>
+{% endblock %}

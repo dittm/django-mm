@@ -23,27 +23,21 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Project</a>
+                <a class="nav-link" href="{% url 'project' %}">Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="monroe.html">Marilyn</a>
+                <a class="nav-link" href="{% url 'monroe' %}">Monroe</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="filmography.html">Filmography</a>
+                <a class="nav-link" href="{% url 'films' %}">Filmography</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="about" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'entity_list' %}">
                   Works
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="works/poetry/all.html">Poems</a></li>
-                  <li><a class="dropdown-item" href="works/letters/all.html">Letters</a></li>
-                  <li><a class="dropdown-item" href="/works/drawings/all.html">Drawings</a></li>
-                  <li><a class="dropdown-item" href="/../all.html">All</a></li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -56,7 +50,7 @@
       
 
     <!-- Content block that will be overridden by child templates -->
-    <div class="content">
+    <div class="content" style="padding-top: 70px;">
         {% block content %}
         {% endblock %}
     </div>
@@ -78,10 +72,11 @@
         </div>
         <div class="text-center p-3" style="background-color: #435585; color: #fff;">
           © 2023 Copyright:
-          <a href="https://monroe-unveiled.vercel.app/">monroe-unveiled.vercel.app</a>
+          <a href="https://django-mm.vercel.app/">django-mm.vercel.app</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="{% static 'osd/openseadragon.min.js' %}"></script>
 </body>
 </html>
