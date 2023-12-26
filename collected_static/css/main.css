@@ -81,3 +81,7 @@ footer > div > a, footer > div > a:hover {
   width: 100%; /* Ensures the image fills its container */
   height: auto; /* Allows the image to scale proportionally */
 }
+
+.ph-img {
+  padding: 10px !important;
+}

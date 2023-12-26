@@ -27,6 +27,21 @@ def monroe(request):
 def drawings(request):
     return render(request, 'works/drawings/all.html')
 
+def letter1(request):
+    return render(request, 'works/letters/letter1.html')
+
+def works(request):
+    return render(request, 'works/all.html')
+
+def letters(request):
+    return render(request, 'works/letters/all.html')
+
+def poems(request):
+    return render(request, 'works/poetry/all.html')
+
+def poem1(request):
+    return render(request, 'works/poetry/poem1.html')
+
 def entity_list(request):
     entities = Entity.objects.all()
     return render(request, 'entity_list.html', {'entities': entities})
