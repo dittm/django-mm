@@ -42,6 +42,12 @@ def poems(request):
 def poem1(request):
     return render(request, 'works/poetry/poem1.html')
 
+def poem2(request):
+    return render(request, 'works/poetry/poem2.html')
+
+def poem4(request):
+    return render(request, 'works/poetry/poem4.html')
+
 def entity_list(request):
     entities = Entity.objects.all()
     return render(request, 'entity_list.html', {'entities': entities})

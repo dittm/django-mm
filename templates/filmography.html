@@ -86,9 +86,55 @@
               </div>
             </div>
           </div>
+
+
+          <br><br><br>
+      <div class="page-header">
+        <h2>Three Films to Watch Online</h2>
+      </div>
+      <br>
+
+      <div id="carouselExample" class="carousel carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'images/niagara.jpg' %}" class="d-block w-100" alt="..." style="opacity: 0.7;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Niagara</h3>
+              <p>Watch it here</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/dbtk.jpg' %}" class="d-block w-100" alt="..." style="opacity: 0.7;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Don't Bother to Knock</h3>
+              <p>Watch it <a href="https://archive.org/details/dont-bother-to-knock-1952">here</a></p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="{% static 'images/gpb.jpg' %}" class="d-block w-100" alt="..." style="opacity: 0.7;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Gentlemen Prefer Blondes</h3>
+              <p>Watch it here</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
 
+    </div>
   </div>
 </div>
 {% endblock %}

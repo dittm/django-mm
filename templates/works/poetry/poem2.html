@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+    </div>
+    <div id="content" class="row">
+        <div class="page-header">
+            <h1></h1>
+        </div>
+
+        <div class="col">
+                <div id="poem2" style="width: 800px; height: 600px;"></div>
+                <div style="padding: 16px;" class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-dark" onclick="openImages()"><i class="fa-solid fa-download" style="color: #212529;"></i> <a target="_blank" class="download-images">Image</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/poem2.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/poem2_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
+                </div>
+        </div>
+        <div class="col" style="background-color: #efefef;">
+                <button id="toggleButton" class="btn btn-outline-dark" style="margin: 10px;">Switch View</button>
+                <div id="letterContent"></div>
+                <table id="xmlTable"></table>
+        </div>
+    </div>
+</div>
+    
+
+
+<!-- settings for downloading images -->
+<script>
+    function openImages() {
+        window.open('https://3.bp.blogspot.com/-A3BoE2FLXRc/WEHLofzRAeI/AAAAAAACeFc/ZKpXnfQpXC8dfHMXLSXLWgmhLnMYX83SQCLcB/s1600/marilyn-monroe-fragments-poems-1.jpg', '_blank');
+    }
+</script>
+
+
+
+<!-- button to toggle between transcription and metadata -->
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const transcriptionContent = document.getElementById('letterContent');
+  const tableContent = document.getElementById('xmlTable');
+
+  function toggleDisplay() {
+    if (transcriptionContent.style.display !== 'none') {
+      transcriptionContent.style.display = 'none';
+      tableContent.style.display = 'block';
+      toggleButton.textContent = 'Show Transcription';
+    } else {
+      transcriptionContent.style.display = 'block';
+      tableContent.style.display = 'none';
+      toggleButton.textContent = 'Show Metadata';
+    }
+  }
+
+  toggleButton.addEventListener('click', function() {
+    toggleDisplay();
+  });
+</script>
+
+
+
+<!-- loading openseadragon images -->
+<script>
+      OpenSeadragon({
+        id: 'poem2',
+        prefixUrl: "{% static 'osd/images/' %}",
+        showNavigator: true,
+        sequenceMode: true,
+        showReferenceStrip: true,
+        showRotationControl: true,
+        referenceStripScroll: "horizontal",
+        showFullPageControl: false,
+        tileSources:   [{
+            type: 'image',
+            url:  'https://3.bp.blogspot.com/-A3BoE2FLXRc/WEHLofzRAeI/AAAAAAACeFc/ZKpXnfQpXC8dfHMXLSXLWgmhLnMYX83SQCLcB/s1600/marilyn-monroe-fragments-poems-1.jpg'
+        }]
+  })
+</script>
+
+
+
+<!-- loading and adapting xml files -->
+<script>
+    function loadXMLDoc(filename) {
+      var xhttp;
+      if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+      } else {
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xhttp.open("GET", filename, false);
+      xhttp.send();
+      return xhttp.responseXML;
+    }
+  
+    function displayLetter() {
+      var letterXml = loadXMLDoc("{% static 'xml/poem2.xml' %}");
+      var metadataXml = loadXMLDoc("{% static 'metadata/poem2_dc.xml' %}");
+      var xsl = loadXMLDoc("{% static 'xslt/letter.xsl' %}");
+
+      var xsltProcessor = new XSLTProcessor();
+      xsltProcessor.importStylesheet(xsl);
+
+      var resultDocument = xsltProcessor.transformToFragment(letterXml, document);
+      document.getElementById("letterContent").appendChild(resultDocument);
+
+      if (metadataXml) {
+        var titles = metadataXml.getElementsByTagNameNS("http://purl.org/dc/elements/1.1/", "title");
+        if (titles.length > 0) {
+            var title = titles[0].textContent;
+            document.querySelector(".page-header h1").innerText = title;
+        }
+      }
+
+
+      const metadata = metadataXml.getElementsByTagName('metadata')[0];
+      const dcElements = metadata.getElementsByTagName('*');
+
+      const headers = [];
+      for (let i = 0; i < dcElements.length; i++) {
+        const element = dcElements[i];
+        const tagName = element.tagName.toLowerCase();
+        if (!headers.includes(tagName)) {
+          headers.push(tagName);
+        }
+      }
+
+    const table = document.getElementById('xmlTable');
+    const tbody = table.createTBody();
+
+    const elementLabels = {
+    'dc:title': 'Title',
+    'dc:creator': 'Creator',
+    'dc:contributor': 'Contributor',
+    'dc:publisher': 'Publisher',
+    'dc:date': 'Date',
+    'dc:rights': 'Rights',
+    'dc:coverage': 'Place of Publication',
+    'dc:relation': 'Relation',
+    'dc:extent': 'Extent',
+    'dc:height': 'Height (in)',
+    'dc:width': 'Width (in)',
+    'dc:value': 'ISBN'
+
+    };
+
+    const displayOrder = [
+    'dc:title',
+    'dc:creator',
+    'dc:contributor',
+    'dc:publisher',
+    'dc:value',
+    'dc:date',
+    'dc:rights',
+    'dc:coverage',
+    'dc:type',
+    'dc:extent',
+    'dc:height',
+    'dc:width',
+    'dc:format'
+    ];
+
+    function formatElement(tagName, content) {
+    if (tagName === 'creator' || tagName === 'contributor') {
+        return `${elementLabels[tagName]}: ${content}`;
+    }
+    return `<strong>${elementLabels[tagName]}</strong> ${content}`;
+    }
+
+    for (let i = 0; i < dcElements.length; i++) {
+    const element = dcElements[i];
+    const tagName = element.tagName.toLowerCase();
+    const content = element.textContent.trim();
+
+    if (elementLabels[tagName]) {
+        const row = tbody.insertRow();
+        const cell = row.insertCell();
+
+    const formattedContent = formatElement(tagName, content);
+
+    cell.innerHTML = formattedContent;
+    }
+    }
+
+    table.style.display = 'block';
+    transcriptionContent.style.display = 'none';
+    toggleButton.textContent = 'Show Transcription';
+    
+    }
+
+    window.onload = displayLetter;
+</script>
+
+     
+{% endblock %}

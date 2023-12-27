@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I guess I have always been (n.d.)</title>
+                <author ref="wd:Q4616">Marilyn Monroe</author>
+                <respStmt>
+                    <resp>Encoded by</resp>
+                    <name>Christina Dittmann</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Farrar, Straus and Giroux</publisher>
+                <pubPlace>New York</pubPlace>
+                <date>2010</date>
+                <idno type="ISBN">978-0-374-15835-4</idno>
+                <availability>
+                    <p>Copyright &#169; 2010 by LSAS International, Inc. All rights reserved</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Private Collection</repository>
+                    </msIdentifier>
+                    <msContents>
+                        <p>Only parts of us will ever touch only parts of others - ones own truth is just that really - ones own truth. We can only share the part that is within anothers knowing acceptable to the other therefore so one is for most part alone. as it is meant to be in evidently in nature - at best though perhaps it could make our understanding seek anothers loneliness out.</p>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Pen on paper</p>
+                                </support>
+                                <extent>One page</extent>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <dimensions type="written">
+                                        <height unit="in">9</height>
+                                        <width unit="in">6</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="poem">
+                <p>Only parts of us will ever <lb/>touch <del rend="overstrike">only</del> parts of others - <lb/>ones own truth is just <lb/>that really - <hi rend="underline">ones</hi> own truth. <lb/>We can only share the <lb/>part that is within anothers knowing acceptable <del rend="overstrike">to</del> <lb/><del rend="overstrike">the other</del> <del rend="overstrike">therefore</del> so one <lb/>is for most part <hi rend="underline">alone</hi>. <lb/>as it is meant to be in <lb/>evidently in nature - at best <del rend="overstrike">though</del> perhaps it could make <lb/>our understanding seek <lb/>anothers loneliness out.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
