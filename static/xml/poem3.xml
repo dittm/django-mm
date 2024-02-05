@@ -38,6 +38,14 @@
                                 </support>
                                 <extent>One page</extent>
                             </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <dimensions type="written">
+                                        <height unit="in">8</height>
+                                        <width unit="in">5</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
                         </objectDesc>
                     </physDesc>
                 </msDesc>
