@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Stones on the walk (n.d.)</title>
+                <author ref="wd:Q4616">Marilyn Monroe</author>
+                <respStmt>
+                    <resp>Encoded by</resp>
+                    <name>Christina Dittmann</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Farrar, Straus and Giroux</publisher>
+                <pubPlace>New York</pubPlace>
+                <date>2010</date>
+                <idno type="ISBN">978-0-374-15835-4</idno>
+                <availability>
+                    <p>Copyright &#169; 2010 by LSAS International, Inc. All rights reserved</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Private Collection</repository>
+                    </msIdentifier>
+                    <msContents>
+                        <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Pen on paper</p>
+                                </support>
+                                <extent>One page</extent>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="poem">
+                <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -9,6 +9,12 @@ def index(request):
 def project(request):
     return render(request, 'project.html')
 
+def imprint(request):
+    return render(request, 'imprint.html')
+
+def data(request):
+    return render(request, 'data.html')
+
 def base(request):
     return render(request, 'base.html')
 
@@ -44,6 +50,9 @@ def poem1(request):
 
 def poem2(request):
     return render(request, 'works/poetry/poem2.html')
+
+def poem3(request):
+    return render(request, 'works/poetry/poem3.html')
 
 def poem4(request):
     return render(request, 'works/poetry/poem4.html')

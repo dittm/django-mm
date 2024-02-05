@@ -1,0 +1,47 @@
+<!-- home.html -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+      </div>
+    <div id="content" class="row">
+    <div class="page-header">
+      <h1>Imprint</h1>
+    </div>
+
+    <div style="text-align:justify;">
+      <div>
+        <h2>Contact Information</h2>
+        <p>Christina Dittmann</p>
+        <p>Email: christina.dittmann@edu.uni-graz.at</p>
+    </div>
+    <div>
+        <h2>Publisher Information</h2>
+        <p>Publisher: Farrar, Straus and Giroux</p>
+        <p>Publication Date: 2010</p>
+        <p>ISBN: 978-0-374-15835-4</p>
+        <p>Rights: Copyright © 2010 by LSAS International, Inc. All rights reserved.</p>
+    </div>
+    <div>
+        <h2>Copyright Disclaimer</h2>
+        <p>This digital scholarly edition includes images of Marilyn Monroe's writings, which are copyrighted material owned by Farrar, Straus and Giroux. As the creator of this website, it is essential to address the copyright status of these images and ensure compliance with intellectual property laws.</p>
+        <p>We are not working directly with the publisher, and these images are used here for educational and research purposes. To avoid legal issues, we have taken the following measures:</p>
+        <ul>
+            <li>We have made every effort to use these copyrighted images within the bounds of fair use as defined by copyright law.</li>
+            <li>If we have obtained specific permissions or licenses to use these images, we have documented and retained records of these agreements.</li>
+            <li>We are committed to promptly addressing any copyright infringement claims made by the rights holder. If you believe your rights have been violated, please contact us immediately.</li>
+        </ul>
+        <p>We understand the importance of respecting intellectual property rights, and we aim to promote scholarship and research within the confines of the law.</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

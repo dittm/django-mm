@@ -17,11 +17,11 @@
         </div>
 
         <div class="col">
-                <div id="letter1" style="width: 800px; height: 600px;"></div>
+                <div id="poem2" style="width: 800px; height: 600px;"></div>
                 <div style="padding: 16px;" class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark" onclick="openImages()"><i class="fa-solid fa-download" style="color: #212529;"></i> <a target="_blank" class="download-images">Image</a></button>
-                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/letter1.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
-                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/letter1_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/poem3.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/poem3_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
                 </div>
         </div>
         <div class="col" style="background-color: #efefef;">
@@ -37,11 +37,7 @@
 <!-- settings for downloading images -->
 <script>
     function openImages() {
-        window.open('https://d2skn5554g4boz.cloudfront.net/2020-website/643/3463774/large/3463774_1.jpg', '_blank');
-        
-        setTimeout(function() {
-            window.open('https://d2skn5554g4boz.cloudfront.net/2020-website/643/3463774/large/3463774_2.jpg', '_blank');
-        }, 300);
+        window.open('https://i0.wp.com/www.themarginalian.org/wp-content/uploads/2012/07/fragments2.jpg', '_blank');
     }
 </script>
 
@@ -75,7 +71,7 @@
 <!-- loading openseadragon images -->
 <script>
       OpenSeadragon({
-          id: 'letter1',
+        id: 'poem2',
         prefixUrl: "{% static 'osd/images/' %}",
         showNavigator: true,
         sequenceMode: true,
@@ -85,10 +81,7 @@
         showFullPageControl: false,
         tileSources:   [{
             type: 'image',
-            url:  'https://d2skn5554g4boz.cloudfront.net/2020-website/643/3463774/large/3463774_1.jpg'
-        },{
-            type: 'image',
-            url:  'https://d2skn5554g4boz.cloudfront.net/2020-website/643/3463774/large/3463774_2.jpg'
+            url:  'https://i0.wp.com/www.themarginalian.org/wp-content/uploads/2012/07/fragments2.jpg'
         }]
   })
 </script>
@@ -110,8 +103,8 @@
     }
   
     function displayLetter() {
-      var letterXml = loadXMLDoc("{% static 'xml/letter1.xml' %}");
-      var metadataXml = loadXMLDoc("{% static 'metadata/letter1_dc.xml' %}");
+      var letterXml = loadXMLDoc("{% static 'xml/poem3.xml' %}");
+      var metadataXml = loadXMLDoc("{% static 'metadata/poem3_dc.xml' %}");
       var xsl = loadXMLDoc("{% static 'xslt/letter.xsl' %}");
 
       var xsltProcessor = new XSLTProcessor();
