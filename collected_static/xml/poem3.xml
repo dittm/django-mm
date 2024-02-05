@@ -6,7 +6,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Only parts of us will ever (n.d.)</title>
+                <title>Stones on the walk (n.d.)</title>
                 <author ref="wd:Q4616">Marilyn Monroe</author>
                 <respStmt>
                     <resp>Encoded by</resp>
@@ -28,7 +28,7 @@
                         <repository>Private Collection</repository>
                     </msIdentifier>
                     <msContents>
-                        <p>Only parts of us will ever touch only parts of others - ones own truth is just that really - ones own truth. We can only share the part that is within anothers knowing acceptable to the other therefore so one is for most part alone. as it is meant to be in evidently in nature - at best though perhaps it could make our understanding seek anothers loneliness out.</p>
+                        <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -38,14 +38,6 @@
                                 </support>
                                 <extent>One page</extent>
                             </supportDesc>
-                            <layoutDesc>
-                                <layout>
-                                    <dimensions type="written">
-                                        <height unit="in">9</height>
-                                        <width unit="in">6</width>
-                                    </dimensions>
-                                </layout>
-                            </layoutDesc>
                         </objectDesc>
                     </physDesc>
                 </msDesc>
@@ -55,7 +47,7 @@
     <text>
         <body>
             <div type="poem">
-                <p>Only parts of us will ever <lb/>touch <del rend="overstrike">only</del> parts of others - <lb/>ones own truth is just <lb/>that really - <hi rend="underline">ones</hi> own truth. <lb/>We can only share the <lb/>part that is within anothers knowing acceptable <del rend="overstrike">to</del> <lb/><del rend="overstrike">the other</del> <del rend="overstrike">therefore</del> so one <lb/>is for most part <hi rend="underline">alone</hi>. <lb/>as it is meant to be in <lb/>evidently in nature - at best <del rend="overstrike">though</del> perhaps it could make <lb/>our understanding seek <lb/>anothers loneliness out.</p>
+                <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
             </div>
         </body>
     </text>
