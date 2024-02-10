@@ -1,42 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_002">
+    <teiHeader xml:id="header_monroe_poem_002">
         <fileDesc>
             <titleStmt>
                 <title>Only parts of us will ever (n.d.)</title>
-                <author ref="wd:Q4616">Marilyn Monroe</author>
+                <author>
+                    <persName ref="wd:Q4616">
+                        <surname>Monroe</surname>
+                        <forename>Marilyn</forename>
+                    </persName>
+                </author>
                 <respStmt>
                     <resp>Encoded by</resp>
-                    <name>Christina Dittmann</name>
+                    <persName xml:id="CD">
+                        <surname>Dittmann</surname>
+                        <forename>Christina</forename>
+                    </persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <publisher>Farrar, Straus and Giroux</publisher>
-                <pubPlace>New York</pubPlace>
-                <date>2010</date>
-                <idno type="ISBN">978-0-374-15835-4</idno>
+                <publisher>
+                    <persName ref="#CD">
+                        <surname>Dittmann</surname>
+                        <forename>Christina</forename>
+                    </persName>
+                </publisher>
+                <publisher>Monroe Unveiled - Digital Edition</publisher>
+                <ref type="url">https://django-mm.vercel.app/</ref>
+                <address>
+                    <orgName>Zentrum für Informationsmodellierung-Austrian Centre for Digital Humanities (ZIM-ACDH)</orgName>
+                    <street>Elisabethstraße 59/III</street>
+                    <settlement>Graz</settlement>
+                    <postCode>8010</postCode>
+                    <country>Österreich</country>
+                </address>
+                <date when="2024-02-10">2024-02-10</date>
                 <availability>
-                    <p>Copyright &#169; 2010 by LSAS International, Inc. All rights reserved</p>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">CC BY
+                        4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title>Fragments</title>
+                        <author>
+                            <persName  ref="wd:Q4616">
+                                <surname>Monroe</surname>
+                                <forename>Marilyn</forename>
+                            </persName>
+                        </author>
+                        <editor>
+                            <persName ref="wd:Q121315556">
+                                <surname>Buchthal</surname>
+                                <forename>Stanley</forename>
+                            </persName>
+                        </editor>
+                        <editor>
+                            <persName ref="wd:Q43730">
+                                <surname>Comment</surname>
+                                <forename>Bernard</forename>
+                            </persName>
+                        </editor>
+                        <imprint>
+                            <publisher>Farrar, Straus and Giroux</publisher>
+                            <pubPlace>New York</pubPlace>
+                            <date when="2010">2010</date>
+                        </imprint>
+                    </monogr>
+                    <note> The image used in this digital edition is merely linked from the book
+                        mentioned above or related articles. It remains under copyright and any use
+                        requires permission from the rights holder. </note>
+                </biblStruct>
                 <msDesc>
                     <msIdentifier>
                         <repository>Private Collection</repository>
+                        <collection>Monroe Papers</collection>
+                        <idno>MM-002</idno>
                     </msIdentifier>
                     <msContents>
-                        <p>Only parts of us will ever touch only parts of others - ones own truth is just that really - ones own truth. We can only share the part that is within anothers knowing acceptable to the other therefore so one is for most part alone. as it is meant to be in evidently in nature - at best though perhaps it could make our understanding seek anothers loneliness out.</p>
+                        <summary>A handwritten poem by Marilyn Monroe, reflecting on the nature of
+                            human connection and loneliness.</summary>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <p>Pen on paper</p>
-                                </support>
-                                <extent>One page</extent>
+                                <support>Pen on paper</support>
+                                <extent>
+                                    <measure type="leaves" unit="pages">1</measure>
+                                </extent>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
@@ -47,15 +102,39 @@
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
+                        <handDesc>
+                            <handNote script="latin">Marilyn Monroe's personal cursive
+                                handwriting.</handNote>
+                        </handDesc>
                     </physDesc>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <revisionDesc>
+            <change when="2024-02-10" who="#CD">Initial encoding of the manuscript following TEI P5
+                guidelines.</change>
+        </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:id="text_monroe_poem_002">
         <body>
             <div type="poem">
-                <p>Only parts of us will ever <lb/>touch <del rend="overstrike">only</del> parts of others - <lb/>ones own truth is just <lb/>that really - <hi rend="underline">ones</hi> own truth. <lb/>We can only share the <lb/>part that is within anothers knowing acceptable <del rend="overstrike">to</del> <lb/><del rend="overstrike">the other</del> <del rend="overstrike">therefore</del> so one <lb/>is for most part <hi rend="underline">alone</hi>. <lb/>as it is meant to be in <lb/>evidently in nature - at best <del rend="overstrike">though</del> perhaps it could make <lb/>our understanding seek <lb/>anothers loneliness out.</p>
+                <lg>
+                    <l>Only parts of us will ever</l>
+                    <l>touch <del rend="overstrike">only</del> parts of others -</l>
+                    <l>one's own truth is just</l>
+                    <l>that really - <hi rend="underline">one's</hi> own truth.</l>
+                    <l>We can only share the</l>
+                    <l>part that is within another's knowing acceptable <del rend="overstrike"
+                            >to</del></l>
+                    <l><del rend="overstrike">the other</del>
+                        <del rend="overstrike">therefore</del> so one</l>
+                    <l>is for most part <hi rend="underline">alone</hi>.</l>
+                    <l>as it is meant to be in</l>
+                    <l>evidently in nature - at best <del rend="overstrike">though</del> perhaps it
+                        could make</l>
+                    <l>our understanding seek</l>
+                    <l>another's loneliness out.</l>
+                </lg>
             </div>
         </body>
     </text>

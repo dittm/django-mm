@@ -12,7 +12,7 @@
         <p>
             <xsl:apply-templates select="tei:text/tei:body/tei:div/tei:opener"/>
         </p>
-        <p><xsl:apply-templates select="tei:text/tei:body/tei:div/tei:p"/></p>
+        <p><xsl:apply-templates select="tei:text/tei:body/tei:div/tei:lg/tei:l"/></p>
     </xsl:template>
 
     <xsl:template match="tei:del[@rend = 'overstrike']">
@@ -27,7 +27,7 @@
         </u>
     </xsl:template>
 
-    <xsl:template match="tei:lb">
+    <xsl:template match="tei:l">
             <xsl:apply-templates/>
         <br/>
     </xsl:template>

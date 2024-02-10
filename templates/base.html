@@ -28,24 +28,43 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'index' %}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'project' %}">Project</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'monroe' %}">Monroe</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'films' %}">Filmography</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'letters' %}">
-                  Letters
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Introduction
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'introduction' %}">Introduction</a></li>
+                  <li><a class="dropdown-item" href="{% url 'guide' %}">Editorial Guidelines</a></li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'poems' %}">
-                  Poems
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Edition
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'letters' %}">Letters</a></li>
+                  <li><a class="dropdown-item" href="{% url 'poems' %}">Poems</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Materials
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'films' %}">Filmography</a></li>
+                  <li><a class="dropdown-item" href="{% url 'bibliography' %}">Bibliography</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Information
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'project' %}">Project Description</a></li>
+                  <li><a class="dropdown-item" href="{% url 'monroe' %}">Marilyn Monroe</a></li>
+                  <li><a class="dropdown-item" href="{% url 'functionality' %}">Functionality</a></li>
+                  <li><a class="dropdown-item" href="{% url 'use' %}">Terms of Use</a></li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -67,11 +86,11 @@
     <footer class="text-center text-white" style="background-color: #818FB4;  color: #fff;">
         <div class="container p-4 pb-0" style=" color: #fff;">
           <div class="mb-4">
-            <a href="{% url 'imprint' %}">Imprint</a> | <a href="{% url 'data' %}">Data Protection</a>
+            <a href="{% url 'imprint' %}" style=" color: #fff;">Imprint</a> | <a href="{% url 'data' %}" style=" color: #fff;">Data Protection</a>
               </div>
         </div>
         <div class="text-center p-3" style="background-color: #435585; color: #fff;">
-          Unless otherwise noted, © 2024 Copyright:
+          Unless otherwise stated, © 2024 Copyright:
           <a href="https://django-mm.vercel.app/">django-mm.vercel.app</a>
         </div>
     </footer>

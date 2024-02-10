@@ -2,7 +2,7 @@
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from example.views import index, carousel, project,carouselSmall, data, imprint, poems, poem1, poem2, poem3, poem4, films, monroe, letters, letter1, works, drawings, entity_detail, entity_list, letter_detail_view
+from example.views import index, carousel, project,carouselSmall, data, imprint, guide, functionality, introduction, use, bibliography, poems, poem1, poem2, poem3, poem4, films, monroe, letters, letter1, works, drawings, entity_detail, entity_list, letter_detail_view
 
 urlpatterns = [
     path('', index, name='index'),
@@ -12,6 +12,11 @@ urlpatterns = [
     path('films/', films, name='films'),
     path('monroe/', monroe, name='monroe'),
     path('imprint/', imprint, name='imprint'),
+    path('guide/', guide, name='guide'),
+    path('functionality/', functionality, name='functionality'),
+    path('introduction/', introduction, name='introduction'),
+    path('use/', use, name='use'),
+    path('bibliography/', bibliography, name='bibliography'),
     path('data/', data, name='data'),
     path('drawings/', drawings, name='drawings'),
     path('works/', works, name='works'),

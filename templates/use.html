@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        {% include 'carousel-s.html' %}
+      </div>
+    <div id="content" class="row">
+    <div class="page-header">
+      <h1>Terms of Use</h1>
+    </div>
+
+    <div style="text-align:justify;">
+        <p>Different terms of use apply to the content of our platform.</p>
+    
+        <h2>Terms of use for the transcriptions</h2>
+        <p><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" title="Link  Creative Commons, Information on licence CC-BY-SA 4.0"><img alt="" class="imgRight" src="{% static 'images/cc-BY-SA.png' %}"></a>The <strong>transcriptions</strong>, their  TEI-coding as well as their publishing content are made availably under <a class="extern" href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" title="Link Creative Commons, Information on licence CC-BY-SA 4.0">Creative Commons-Licence 4.0 (CC BY-SA 4.0)</a>.</p>
+    
+        <h2>Terms of use for the digital facsimiles</h2>
+        <p>With the <strong>digital facsimiles</strong> the terms of the original apply: Monroe, Marilyn (2010). Buchthal, Stanley, Comment, Bernard (eds.) Fragments: Poems, Intimate Notes, Letters, Farrar, Straus and Giroux.</p>
+     
+        <h2>Citation</h2>
+        <p>Please cite this edition as follows:</p>
+        <p>Marilyn Unveiled: A Digital Edition, edited by Christina Dittmann. Graz, 2024.URL: https://django-mm.vercel.app/ [Date of retrieval].</p>
+      
+    </div>
+
+  </div>
+</div>
+{% endblock %}

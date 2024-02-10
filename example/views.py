@@ -12,6 +12,21 @@ def project(request):
 def imprint(request):
     return render(request, 'imprint.html')
 
+def guide(request):
+    return render(request, 'guide.html')
+
+def functionality(request):
+    return render(request, 'functionality.html')
+
+def introduction(request):
+    return render(request, 'introduction.html')
+
+def use(request):
+    return render(request, 'use.html')
+
+def bibliography(request):
+    return render(request, 'bibliography.html')
+
 def data(request):
     return render(request, 'data.html')
 
