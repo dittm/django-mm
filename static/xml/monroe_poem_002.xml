@@ -2,11 +2,11 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_003">
-    <teiHeader xml:id="header_monroe_poem_003">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_002">
+    <teiHeader xml:id="header_monroe_poem_002">
         <fileDesc>
             <titleStmt>
-                <title>Poem Stones on the walk (n.d.)</title>
+                <title>Only parts of us will ever (n.d.)</title>
                 <author>
                     <persName ref="wd:Q4616">
                         <surname>Monroe</surname>
@@ -79,7 +79,7 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>MM-003</idno>
+                        <idno>MM-002</idno>
                     </msIdentifier>
                     <msContents>
                         <summary>A handwritten poem by Marilyn Monroe, reflecting on the nature of
@@ -96,8 +96,8 @@
                             <layoutDesc>
                                 <layout>
                                     <dimensions type="written">
-                                        <height unit="in">8</height>
-                                        <width unit="in">5</width>
+                                        <height unit="in">9</height>
+                                        <width unit="in">6</width>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
@@ -115,10 +115,26 @@
                 guidelines.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:id="text_monroe_poem_002">
         <body>
             <div type="poem">
-                <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
+                <lg>
+                    <l>Only parts of us will ever</l>
+                    <l>touch <del rend="overstrike">only</del> parts of others -</l>
+                    <l>one's own truth is just</l>
+                    <l>that really - <hi rend="underline">one's</hi> own truth.</l>
+                    <l>We can only share the</l>
+                    <l>part that is within another's knowing acceptable <del rend="overstrike"
+                            >to</del></l>
+                    <l><del rend="overstrike">the other</del>
+                        <del rend="overstrike">therefore</del> so one</l>
+                    <l>is for most part <hi rend="underline">alone</hi>.</l>
+                    <l>as it is meant to be in</l>
+                    <l>evidently in nature - at best <del rend="overstrike">though</del> perhaps it
+                        could make</l>
+                    <l>our understanding seek</l>
+                    <l>another's loneliness out.</l>
+                </lg>
             </div>
         </body>
     </text>

@@ -21,7 +21,7 @@
                 <div style="padding: 16px;" class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark" onclick="openImages()"><i class="fa-solid fa-download" style="color: #212529;"></i> <a target="_blank" class="download-images">Image</a></button>
                   <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/poem3.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
-                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/poem3_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/monroe_poem_003_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
                 </div>
         </div>
         <div class="col" style="background-color: #efefef;">
@@ -104,7 +104,7 @@
   
     function displayLetter() {
       var letterXml = loadXMLDoc("{% static 'xml/poem3.xml' %}");
-      var metadataXml = loadXMLDoc("{% static 'metadata/poem3_dc.xml' %}");
+      var metadataXml = loadXMLDoc("{% static 'metadata/monroe_poem_003_dc.xml' %}");
       var xsl = loadXMLDoc("{% static 'xslt/letter.xsl' %}");
 
       var xsltProcessor = new XSLTProcessor();

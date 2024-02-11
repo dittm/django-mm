@@ -2,11 +2,11 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_003">
-    <teiHeader xml:id="header_monroe_poem_003">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_001">
+    <teiHeader xml:id="header_monroe_poem_001">
         <fileDesc>
             <titleStmt>
-                <title>Poem Stones on the walk (n.d.)</title>
+                <title>Only parts of us will ever (n.d.)</title>
                 <author>
                     <persName ref="wd:Q4616">
                         <surname>Monroe</surname>
@@ -79,11 +79,10 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>MM-003</idno>
+                        <idno>MM-001</idno>
                     </msIdentifier>
                     <msContents>
-                        <summary>A handwritten poem by Marilyn Monroe, reflecting on the nature of
-                            human connection and loneliness.</summary>
+                        <summary>A handwritten poem by Marilyn Monroe, reflecting on the dynamics of work and life.</summary>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -115,10 +114,18 @@
                 guidelines.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:id="text_monroe_poem_001">
         <body>
             <div type="poem">
-                <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
+                <lg>
+                <l><hi rend="underline">for life</hi></l>
+                <l>It is rather a</l>
+                <l>determination not to</l>
+                <l>be overwhelmed.</l>
+                <l><hi rend="underline">for work</hi></l>
+                <l>The truth can only</l>
+                <l>be recalled, never</l>
+                <l>invented.</l>
             </div>
         </body>
     </text>
