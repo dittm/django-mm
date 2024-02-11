@@ -79,7 +79,7 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>MM-001</idno>
+                        <idno>monroe_poem_001</idno>
                     </msIdentifier>
                     <msContents>
                         <summary>A handwritten poem by Marilyn Monroe, reflecting on the dynamics of work and life.</summary>
@@ -126,6 +126,7 @@
                 <l>The truth can only</l>
                 <l>be recalled, never</l>
                 <l>invented.</l>
+                </lg>
             </div>
         </body>
     </text>

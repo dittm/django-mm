@@ -6,7 +6,7 @@
     <teiHeader xml:id="header_monroe_poem_001">
         <fileDesc>
             <titleStmt>
-                <title>Only parts of us will ever (n.d.)</title>
+                <title>Poem for life (n.d.)</title>
                 <author>
                     <persName ref="wd:Q4616">
                         <surname>Monroe</surname>
@@ -79,7 +79,7 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>MM-001</idno>
+                        <idno>monroe_poem_001</idno>
                     </msIdentifier>
                     <msContents>
                         <summary>A handwritten poem by Marilyn Monroe, reflecting on the dynamics of work and life.</summary>
@@ -126,6 +126,7 @@
                 <l>The truth can only</l>
                 <l>be recalled, never</l>
                 <l>invented.</l>
+                </lg>
             </div>
         </body>
     </text>

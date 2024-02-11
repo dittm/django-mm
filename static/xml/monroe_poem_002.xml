@@ -79,7 +79,7 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>MM-002</idno>
+                        <idno>monroe_poem_002</idno>
                     </msIdentifier>
                     <msContents>
                         <summary>A handwritten poem by Marilyn Monroe, reflecting on the nature of
@@ -124,14 +124,13 @@
                     <l>one's own truth is just</l>
                     <l>that really - <hi rend="underline">one's</hi> own truth.</l>
                     <l>We can only share the</l>
-                    <l>part that is within another's knowing acceptable <del rend="overstrike"
+                    <l>part that is <add place="above">within another's knowing</add> acceptable <del rend="overstrike"
                             >to</del></l>
                     <l><del rend="overstrike">the other</del>
-                        <del rend="overstrike">therefore</del> so one</l>
+                        <del rend="overstrike">therefore</del> <add place="above">so</add> one</l>
                     <l>is for most part <hi rend="underline">alone</hi>.</l>
                     <l>as it is meant to be in</l>
-                    <l>evidently in nature - at best <del rend="overstrike">though</del> perhaps it
-                        could make</l>
+                    <l><add place="above">evidently</add> in nature - at best <del rend="overstrike">though</del> <add place="above">perhaps it could</add> make</l>
                     <l>our understanding seek</l>
                     <l>another's loneliness out.</l>
                 </lg>

@@ -71,23 +71,3 @@ def poem3(request):
 
 def poem4(request):
     return render(request, 'works/poetry/poem4.html')
-
-def entity_list(request):
-    entities = Entity.objects.all()
-    return render(request, 'entity_list.html', {'entities': entities})
-
-def entity_detail(request, pk):
-    entity = get_object_or_404(Entity, pk=pk)
-    images = entity.images.all()
-    return render(request, 'entity_detail.html', {'entity': entity, 'images': images})
-
-def letter_detail_view(request, letter_id):
-    letter = get_object_or_404(Entity, pk=letter_id, category='letter')
-    images = letter.images.all()
-
-    context = {
-        'letter': letter,
-        'images': images,
-    }
-
-    return render(request, 'works/letters/letter_detail.html', context)

@@ -2,11 +2,11 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_002">
-    <teiHeader xml:id="header_monroe_poem_002">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_003">
+    <teiHeader xml:id="header_monroe_poem_003">
         <fileDesc>
             <titleStmt>
-                <title>Only parts of us will ever (n.d.)</title>
+                <title>Poem Stones on the walk (n.d.)</title>
                 <author>
                     <persName ref="wd:Q4616">
                         <surname>Monroe</surname>
@@ -79,11 +79,10 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>monroe_poem_002</idno>
+                        <idno>monroe_poem_003</idno>
                     </msIdentifier>
                     <msContents>
-                        <summary>A handwritten poem by Marilyn Monroe, reflecting on the nature of
-                            human connection and loneliness.</summary>
+                        <summary>A handwritten poem by Marilyn Monroe, reflecting on humankind and the future.</summary>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -96,8 +95,8 @@
                             <layoutDesc>
                                 <layout>
                                     <dimensions type="written">
-                                        <height unit="in">9</height>
-                                        <width unit="in">6</width>
+                                        <height unit="in">8</height>
+                                        <width unit="in">5</width>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
@@ -115,24 +114,18 @@
                 guidelines.</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:id="text_monroe_poem_002">
+    <text xml:id="text_monroe_poem_003">
         <body>
             <div type="poem">
-                <lg>
-                    <l>Only parts of us will ever</l>
-                    <l>touch <del rend="overstrike">only</del> parts of others -</l>
-                    <l>one's own truth is just</l>
-                    <l>that really - <hi rend="underline">one's</hi> own truth.</l>
-                    <l>We can only share the</l>
-                    <l>part that is <add place="above">within another's knowing</add> acceptable <del rend="overstrike"
-                            >to</del></l>
-                    <l><del rend="overstrike">the other</del>
-                        <del rend="overstrike">therefore</del> <add place="above">so</add> one</l>
-                    <l>is for most part <hi rend="underline">alone</hi>.</l>
-                    <l>as it is meant to be in</l>
-                    <l><add place="above">evidently</add> in nature - at best <del rend="overstrike">though</del> <add place="above">perhaps it could</add> make</l>
-                    <l>our understanding seek</l>
-                    <l>another's loneliness out.</l>
+            <lg>
+                <l>Stones on the walk</l>
+                <l>every color there is</l>
+                <l>I stare down at you</l>
+                <l>like <add place="above"><del rend="overstrike">there</del></add> <del rend="overstrike">are</del> a hirizon —</l>
+                <l>the <add place="above">space</add> air is between us <add place="above">beckoning</add> bukoning</l>
+                <l><del rend="overstrike">and</del> <add place="above">and I am</add> many stories up <del rend="overstrike">besides</del> -</l>
+                <l>my feet <del rend="overstrike">are</del> frightened</l>
+                <l><del rend="overstrike">from</del> <add place="above">as</add> <del rend="overstrike">my</del> grasp <del rend="overstrike">for</del> <add place="above">towards</add> you</l>
                 </lg>
             </div>
         </body>

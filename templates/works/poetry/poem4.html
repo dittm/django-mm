@@ -10,6 +10,12 @@
     </div>
     <div id="content" class="row">
         <div class="page-header">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'poems' %}">Poems</a></li>
+              <li class="breadcrumb-item active" aria-current="page">monroe_poem_004</li>
+            </ol>
+          </nav>
             <h1></h1>
             <div class="alert alert-warning" role="alert">
               This digital scholarly edition includes images of Marilyn Monroe's writings, which are copyrighted material owned by Farrar, Straus and Giroux. All rights reserved.
@@ -17,11 +23,11 @@
         </div>
 
         <div class="col">
-                <div id="poem2" style="width: 800px; height: 600px;"></div>
+                <div id="poem4" style="width: 800px; height: 600px;"></div>
                 <div style="padding: 16px;" class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark" onclick="openImages()"><i class="fa-solid fa-download" style="color: #212529;"></i> <a target="_blank" class="download-images">Image</a></button>
-                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/poem2.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
-                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/poem2_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/monroe_poem_004.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/monroe_poem_004_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
                 </div>
         </div>
         <div class="col" style="background-color: #efefef;">
@@ -37,7 +43,7 @@
 <!-- settings for downloading images -->
 <script>
     function openImages() {
-        window.open('https://3.bp.blogspot.com/-A3BoE2FLXRc/WEHLofzRAeI/AAAAAAACeFc/ZKpXnfQpXC8dfHMXLSXLWgmhLnMYX83SQCLcB/s1600/marilyn-monroe-fragments-poems-1.jpg', '_blank');
+        window.open('https://i0.wp.com/www.themarginalian.org/wp-content/uploads/2012/07/fragments6.jpg', '_blank');
     }
 </script>
 
@@ -71,7 +77,7 @@
 <!-- loading openseadragon images -->
 <script>
       OpenSeadragon({
-        id: 'poem2',
+        id: 'poem4',
         prefixUrl: "{% static 'osd/images/' %}",
         showNavigator: true,
         sequenceMode: true,
@@ -81,7 +87,7 @@
         showFullPageControl: false,
         tileSources:   [{
             type: 'image',
-            url:  'https://3.bp.blogspot.com/-A3BoE2FLXRc/WEHLofzRAeI/AAAAAAACeFc/ZKpXnfQpXC8dfHMXLSXLWgmhLnMYX83SQCLcB/s1600/marilyn-monroe-fragments-poems-1.jpg'
+            url:  'https://i0.wp.com/www.themarginalian.org/wp-content/uploads/2012/07/fragments6.jpg'
         }]
   })
 </script>
@@ -103,8 +109,8 @@
     }
   
     function displayLetter() {
-      var letterXml = loadXMLDoc("{% static 'xml/poem2.xml' %}");
-      var metadataXml = loadXMLDoc("{% static 'metadata/poem2_dc.xml' %}");
+      var letterXml = loadXMLDoc("{% static 'xml/monroe_poem_004.xml' %}");
+      var metadataXml = loadXMLDoc("{% static 'metadata/monroe_poem_004_dc.xml' %}");
       var xsl = loadXMLDoc("{% static 'xslt/letter.xsl' %}");
 
       var xsltProcessor = new XSLTProcessor();
@@ -149,13 +155,15 @@
     'dc:extent': 'Extent',
     'dc:height': 'Height (in)',
     'dc:width': 'Width (in)',
-    'dc:value': 'ISBN'
+    'dc:value': 'ISBN',
+    'dc:idno': 'ID'
 
     };
 
     const displayOrder = [
     'dc:title',
     'dc:creator',
+    'dc:idno',
     'dc:contributor',
     'dc:publisher',
     'dc:value',

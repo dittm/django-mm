@@ -9,6 +9,12 @@
         {% include 'carousel-s.html' %}
     </div>
     <div id="content" class="row">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'poems' %}">Poems</a></li>
+          <li class="breadcrumb-item active" aria-current="page">monroe_poem_001</li>
+        </ol>
+      </nav>
         <div class="page-header">
             <h1></h1>
             <div class="alert alert-warning" role="alert">
@@ -149,13 +155,15 @@
     'dc:extent': 'Extent',
     'dc:height': 'Height (in)',
     'dc:width': 'Width (in)',
-    'dc:value': 'ISBN'
+    'dc:value': 'ISBN',
+    'dc:idno': 'ID'
 
     };
 
     const displayOrder = [
     'dc:title',
     'dc:creator',
+    'dc:idno',
     'dc:contributor',
     'dc:publisher',
     'dc:value',

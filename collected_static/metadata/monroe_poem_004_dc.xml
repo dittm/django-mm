@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:title>Poem Only parts of us will ever (n.d.)</dc:title>
+    <dc:title>I guess I have always been (n.d.)</dc:title>
         <dc:creator>Marilyn Monroe (wd:Q4616)</dc:creator>
     <dc:contributor>Christina Dittmann</dc:contributor>
     <dc:publisher>Farrar, Straus and Giroux</dc:publisher>
@@ -8,6 +8,7 @@
     <dc:identifier>
         <dc:type>ISBN</dc:type>
         <dc:value>978-0-374-15835-4</dc:value>
+        <dc:idno>monroe_poem_004</dc:idno>
     </dc:identifier>
     <dc:rights>Copyright &#169; 2010 by LSAS International, Inc. All rights reserved.</dc:rights>
     <dc:coverage>New York</dc:coverage>

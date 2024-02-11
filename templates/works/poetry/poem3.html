@@ -10,6 +10,12 @@
     </div>
     <div id="content" class="row">
         <div class="page-header">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'poems' %}">Poems</a></li>
+              <li class="breadcrumb-item active" aria-current="page">monroe_poem_003</li>
+            </ol>
+          </nav>
             <h1></h1>
             <div class="alert alert-warning" role="alert">
               This digital scholarly edition includes images of Marilyn Monroe's writings, which are copyrighted material owned by Farrar, Straus and Giroux. All rights reserved.
@@ -17,10 +23,10 @@
         </div>
 
         <div class="col">
-                <div id="poem2" style="width: 800px; height: 600px;"></div>
+                <div id="poem3" style="width: 800px; height: 600px;"></div>
                 <div style="padding: 16px;" class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark" onclick="openImages()"><i class="fa-solid fa-download" style="color: #212529;"></i> <a target="_blank" class="download-images">Image</a></button>
-                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/poem3.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'xml/monroe_poem_003.xml' %}" target="_blank" class="download-xml">TEI/XML</a></button>
                   <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-download" style="color: #212529;"></i> <a href="{% static 'metadata/monroe_poem_003_dc.xml' %}" target="_blank" class="download-dc">DC Metadata</a></button>
                 </div>
         </div>
@@ -71,7 +77,7 @@
 <!-- loading openseadragon images -->
 <script>
       OpenSeadragon({
-        id: 'poem2',
+        id: 'poem3',
         prefixUrl: "{% static 'osd/images/' %}",
         showNavigator: true,
         sequenceMode: true,
@@ -103,7 +109,7 @@
     }
   
     function displayLetter() {
-      var letterXml = loadXMLDoc("{% static 'xml/poem3.xml' %}");
+      var letterXml = loadXMLDoc("{% static 'xml/monroe_poem_003.xml' %}");
       var metadataXml = loadXMLDoc("{% static 'metadata/monroe_poem_003_dc.xml' %}");
       var xsl = loadXMLDoc("{% static 'xslt/letter.xsl' %}");
 
@@ -149,13 +155,15 @@
     'dc:extent': 'Extent',
     'dc:height': 'Height (in)',
     'dc:width': 'Width (in)',
-    'dc:value': 'ISBN'
+    'dc:value': 'ISBN',
+    'dc:idno': 'ID'
 
     };
 
     const displayOrder = [
     'dc:title',
     'dc:creator',
+    'dc:idno',
     'dc:contributor',
     'dc:publisher',
     'dc:value',

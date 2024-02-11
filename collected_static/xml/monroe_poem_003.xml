@@ -79,11 +79,10 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>MM-003</idno>
+                        <idno>monroe_poem_003</idno>
                     </msIdentifier>
                     <msContents>
-                        <summary>A handwritten poem by Marilyn Monroe, reflecting on the nature of
-                            human connection and loneliness.</summary>
+                        <summary>A handwritten poem by Marilyn Monroe, reflecting on humankind and the future.</summary>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -115,10 +114,19 @@
                 guidelines.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:id="text_monroe_poem_003">
         <body>
             <div type="poem">
-                <p>Stones on the walk every color there is I stare down at you like these the a horizon — the space / the air is between us beckoning and I am many stories besides up my feet are frightened from my as I grasp for towards you</p>
+            <lg>
+                <l>Stones on the walk</l>
+                <l>every color there is</l>
+                <l>I stare down at you</l>
+                <l>like <add place="above"><del rend="overstrike">there</del></add> <del rend="overstrike">are</del> a hirizon —</l>
+                <l>the <add place="above">space</add> air is between us <add place="above">beckoning</add> bukoning</l>
+                <l><del rend="overstrike">and</del> <add place="above">and I am</add> many stories up <del rend="overstrike">besides</del> -</l>
+                <l>my feet <del rend="overstrike">are</del> frightened</l>
+                <l><del rend="overstrike">from</del> <add place="above">as</add> <del rend="overstrike">my</del> grasp <del rend="overstrike">for</del> <add place="above">towards</add> you</l>
+                </lg>
             </div>
         </body>
     </text>

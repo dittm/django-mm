@@ -2,7 +2,7 @@
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from example.views import index, carousel, project,carouselSmall, data, imprint, guide, functionality, introduction, use, bibliography, poems, poem1, poem2, poem3, poem4, films, monroe, letters, letter1, works, drawings, entity_detail, entity_list, letter_detail_view
+from example.views import index, carousel, project,carouselSmall, data, imprint, guide, functionality, introduction, use, bibliography, poems, poem1, poem2, poem3, poem4, films, monroe, letters, letter1, works, drawings
 
 urlpatterns = [
     path('', index, name='index'),
@@ -27,9 +27,6 @@ urlpatterns = [
     path('poems/2', poem2, name='poem2'),
     path('poems/3', poem3, name='poem3'),
     path('poems/4', poem4, name='poem4'),
-    path('entities/', entity_list, name='entity_list'),
-    path('entity/<int:pk>/', entity_detail, name='entity_detail'),
-    path('works/letters/<int:letter_id>/', letter_detail_view, name='letter_detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
