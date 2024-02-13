@@ -6,7 +6,7 @@
     <teiHeader xml:id="header_monroe_poem_003">
         <fileDesc>
             <titleStmt>
-                <title>Poem Stones on the walk (n.d.)</title>
+                <title>Poem stones on the walk (n.d.)</title>
                 <author>
                     <persName ref="wd:Q4616">
                         <surname>Monroe</surname>
@@ -118,7 +118,7 @@
         <body>
             <div type="poem">
             <lg>
-                <l>Stones on the walk</l>
+                <l>stones on the walk</l>
                 <l>every color there is</l>
                 <l>I stare down at you</l>
                 <l>like <add place="above"><del rend="overstrike">there</del></add> <del rend="overstrike">are</del> a hirizon —</l>

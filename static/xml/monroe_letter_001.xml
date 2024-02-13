@@ -2,11 +2,11 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_poem_003">
-    <teiHeader xml:id="header_monroe_poem_003">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="monroe_letter_001">
+    <teiHeader xml:id="header_monroe_letter_001">
         <fileDesc>
             <titleStmt>
-                <title>Poem stones on the walk (n.d.)</title>
+                <title>Letter to Dr Hohenberg (1956-1957)</title>
                 <author>
                     <persName ref="wd:Q4616">
                         <surname>Monroe</surname>
@@ -31,7 +31,8 @@
                 <publisher>Monroe Unveiled - Digital Edition</publisher>
                 <ref type="url">https://django-mm.vercel.app/</ref>
                 <address>
-                    <orgName>Zentrum für Informationsmodellierung-Austrian Centre for Digital Humanities (ZIM-ACDH)</orgName>
+                    <orgName>Zentrum für Informationsmodellierung-Austrian Centre for Digital
+                        Humanities (ZIM-ACDH)</orgName>
                     <street>Elisabethstraße 59/III</street>
                     <settlement>Graz</settlement>
                     <postCode>8010</postCode>
@@ -48,7 +49,7 @@
                     <monogr>
                         <title>Fragments</title>
                         <author>
-                            <persName  ref="wd:Q4616">
+                            <persName ref="wd:Q4616">
                                 <surname>Monroe</surname>
                                 <forename>Marilyn</forename>
                             </persName>
@@ -79,10 +80,11 @@
                     <msIdentifier>
                         <repository>Private Collection</repository>
                         <collection>Monroe Papers</collection>
-                        <idno>monroe_poem_003</idno>
+                        <idno>monroe_letter_001</idno>
                     </msIdentifier>
                     <msContents>
-                        <summary>A handwritten poem by Marilyn Monroe, reflecting on humankind and the future.</summary>
+                        <summary>A handwritten letter by Marilyn Monroe to her psychiatrist Dr
+                            Hohenberg.</summary>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -95,8 +97,8 @@
                             <layoutDesc>
                                 <layout>
                                     <dimensions type="written">
-                                        <height unit="in">8</height>
-                                        <width unit="in">5</width>
+                                        <height unit="in">3.75</height>
+                                        <width unit="in">6.75</width>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
@@ -106,26 +108,83 @@
                                 handwriting.</handNote>
                         </handDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origDate notBefore="1956" notAfter="1957">Approximate date:
+                                1956-1957</origDate>
+                        </origin>
+                    </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="wd:Q4616">Marilyn Monroe</persName>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="wd:Q3846865">Dr. Margaret Hohenberg</persName>
+                </correspAction>
+            </correspDesc>
+        </profileDesc>
         <revisionDesc>
             <change when="2024-02-10" who="#CD">Initial encoding of the manuscript following TEI P5
                 guidelines.</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:id="text_monroe_poem_003">
+    <text>
         <body>
-            <div type="poem">
-            <lg>
-                <l>stones on the walk</l>
-                <l>every color there is</l>
-                <l>I stare down at you</l>
-                <l>like <add place="above"><del rend="overstrike">there</del></add> <del rend="overstrike">are</del> a hirizon —</l>
-                <l>the <add place="above">space</add> air is between us <add place="above">beckoning</add> bukoning</l>
-                <l><del rend="overstrike">and</del> <add place="above">and I am</add> many stories up <del rend="overstrike">besides</del> -</l>
-                <l>my feet <del rend="overstrike">are</del> frightened</l>
-                <l><del rend="overstrike">from</del> <add place="above">as</add> <del rend="overstrike">my</del> grasp <del rend="overstrike">for</del> <add place="above">towards</add> you</l>
+            <div type="text__monroe_letter_001">
+                <opener>
+                    <salute>Dear <persName ref="wd:Q3846865">Dr Hohenberg</persName></salute>
+                </opener>
+                <lg>
+                    <l>I’ve been wondering </l>
+                    <l>myself why I don’t</l>
+                    <l>write to you.</l>
+                    <l><del rend="overstrike">I thought it has to</del></l>
+                    <l><del rend="overstrike">do with the part that</del></l>
+                    <l>I’ve <add place="above">been</add> feeling I was taken</l>
+                    <l>away from you or</l>
+                    <l>that you sent me</l>
+                    <l>away from you -</l>
+                    <l><add place="left"><del rend="overstrike">with your permission</del></add></l>
+                    <l>On the whole, things</l>
+                    <l>are going along rather</l>
+                    <l>well <hi rend="underline">so</hi>
+                        <hi rend="underline">far</hi>.</l>
+                    <l><hi rend="underline">M</hi>., our agents, and</l>
+                    <l><persName>Stein</persName>, our lawyer <del rend="overstrike">are</del></l>
+                    <l>have dealt dealing with <persName ref="wd:Q1802795">Natasha</persName></l>
+                    <l>but - we’ll see -</l>
+                    <l>I have a strange</l>
+                    <l>feeling about <persName ref="wd:Q1805151">Paula</persName></l>
+                    <l>I mean - she works</l>
+                    <l>differently than <persName ref="wd:Q297945">Lee</persName></l>
+                    <l>Anyway <del rend="overstrike">am</del> I keep</l>
+                    <l>feeling I won’t be</l>
+                    <pb/>
+                    <l><add place="above">but she is a wonderful</add></l>
+                    <l><add place="above">and warm person - which also</add></l>
+                    <l><add place="above">bewilders me</add></l>
+                    <l>able to do the part</l>
+                    <l>when I have too it</l>
+                    <l>like a horrible nightmare</l>
+                    <l>Also I guess I didn’t</l>
+                    <l>write you before this</l>
+                    <l>because I was waiting</l>
+                    <l>to see if I would get</l>
+                    <l>shot-first.</l>
+                    <l><persName ref="wd:Q80596">Arthur</persName> writes me</l>
+                    <l>every day, at least <del rend="overstrike">that</del> it</l>
+                    <l>gives me <del rend="overstrike">a little</del> air to</l>
+                    <l>breathe - I can't get</l>
+                    <l>use to the fact that he</l>
+                    <l>loves me and I keep</l>
+                    <l>waiting for him to</l>
+                    <l>stop <add place="above">loving me</add> though I hope</l>
+                    <l>he never will - but I keep</l>
+                    <l>telling myself - who knows?</l>
                 </lg>
             </div>
         </body>
